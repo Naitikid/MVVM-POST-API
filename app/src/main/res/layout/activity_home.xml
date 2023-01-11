@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="profileviewmodel"
+            type="com.example.mvvmpostapi.acivity.homeActivity.Homeviewmodel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".acivity.homeActivity.HomeActivity">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageviewforHome"
+            android:layout_width="@dimen/dimens_150dp"
+            android:layout_height="@dimen/dimens_150dp"
+            android:layout_marginTop="@dimen/dimens_100dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@id/Homename"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/Homename"
+            android:layout_width="@dimen/dimens_0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/home"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimens_25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/usernameid"
+            android:layout_width="@dimen/dimens_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            android:gravity="center"
+            android:hint="@string/id"
+            android:text="@={profileviewmodel.userid}"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Homename" />
+
+        <com.google.android.material.textview.MaterialTextView
+
+            android:id="@+id/nametext"
+            android:layout_width="@dimen/dimens_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            android:gravity="center"
+            android:hint="@string/emailhome"
+            android:text="@={profileviewmodel.emailidhome}"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/usernameid" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/Emailtext"
+            android:layout_width="@dimen/dimens_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            android:gravity="center"
+            android:hint="@string/username"
+            android:text="@={profileviewmodel.usernamehome}"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nametext" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

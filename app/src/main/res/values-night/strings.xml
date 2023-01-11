@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cameraPermissionDenied">Camera Permission  Denied</string>
+    <string name="gallaryPermissionDenied">Gallary Permission Denied</string>
+    <string name="camera">Camera</string>
+</resources>
